@@ -1,0 +1,59 @@
+{
+	"info": {
+		"_postman_id": "3a8c0dc7-dddf-450e-8499-c442d175a74a",
+		"name": "Tema2",
+		"description": "acesta este un test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAnimale",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "Cauta animalele din baza de date.\nParametrii suportati: nume, rasa, stapan, id"
+			},
+			"response": []
+		},
+		{
+			"name": "postAnimal",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "Adauga un animal in baza de date.\nTrebuie specificati parametrii: nume, rasa, stapan"
+			},
+			"response": []
+		},
+		{
+			"name": "putAnimal",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "Modifica un animal din baza de date.\nParametri necesari id si macar unul din: nume, stapan, rasa"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteAnimal",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "Sterge un animal din baza de date.\nAre nevoie de parametrul id."
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
