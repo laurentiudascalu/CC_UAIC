@@ -1,0 +1,84 @@
+{
+  "openapi" : "3.0.0",
+  "info" : {
+    "title" : "YourStuff",
+    "description" : "This will return information based on selected category and search key",
+    "version" : "1.0.0"
+  },
+  "servers" : [ {
+    "url" : "https://virtserver.swaggerhub.com/laurametist/YourStuff/1.0.0",
+    "description" : "SwaggerHub API Auto Mocking"
+  } ],
+  "paths" : {
+    "/infoSearch/{cat}/{search}" : {
+      "get" : {
+        "tags" : [ "infos" ],
+        "summary" : "Get informations from specific category based on search key",
+        "operationId" : "getInfo",
+        "parameters" : [ {
+          "name" : "cat",
+          "in" : "path",
+          "description" : "Cateory",
+          "required" : true,
+          "style" : "simple",
+          "explode" : false,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "search",
+          "in" : "path",
+          "description" : "Search key",
+          "required" : true,
+          "style" : "simple",
+          "explode" : false,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success"
+          },
+          "401" : {
+            "description" : "Category does not exist"
+          },
+          "405" : {
+            "description" : "Invalid category/search"
+          }
+        }
+      }
+    },
+    "/infoUser/{key}" : {
+      "get" : {
+        "tags" : [ "infos" ],
+        "summary" : "Get informations for your categories from your account",
+        "operationId" : "getInfoUser",
+        "parameters" : [ {
+          "name" : "key",
+          "in" : "path",
+          "description" : "Key - generated from your account in the platform",
+          "required" : true,
+          "style" : "simple",
+          "explode" : false,
+          "schema" : {
+            "type" : "integer",
+            "format" : "int64"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success"
+          },
+          "401" : {
+            "description" : "Key does not exists"
+          },
+          "405" : {
+            "description" : "Invalid key"
+          }
+        }
+      }
+    }
+  },
+  "components" : { }
+}
